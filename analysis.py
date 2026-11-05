@@ -104,13 +104,17 @@ ax.legend(
     frameon=False
 )
 
-# 10. Adjust layout and save
-plt.tight_layout()
-
-plt.savefig(
-    "conflict_of_interest.png",
-    dpi=300,
-    bbox_inches="tight"
+# Add source note below the chart
+fig.text(
+    0.01,
+    0.015,
+    "Figure 1. Source: EuroPAM, 2024 data (may not include recent changes). "
+    "Scores 0-100: higher = more complete formal rules.",
+    fontsize=9,
+    ha="left"
 )
 
-plt.show()
+# Leave space for the source note
+plt.tight_layout(rect=[0, 0.07, 1, 1])
+
+    
